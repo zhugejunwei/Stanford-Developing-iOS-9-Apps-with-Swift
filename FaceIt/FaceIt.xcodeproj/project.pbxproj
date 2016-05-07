@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		232D9D341CDCF6A0007F9241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D331CDCF6A0007F9241 /* AppDelegate.swift */; };
+		232D9D361CDCF6A0007F9241 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D351CDCF6A0007F9241 /* FaceViewController.swift */; };
+		232D9D391CDCF6A0007F9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232D9D371CDCF6A0007F9241 /* Main.storyboard */; };
+		232D9D3B1CDCF6A0007F9241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232D9D3A1CDCF6A0007F9241 /* Assets.xcassets */; };
+		232D9D3E1CDCF6A0007F9241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232D9D3C1CDCF6A0007F9241 /* LaunchScreen.storyboard */; };
+		232D9D471CDCF7A7007F9241 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D461CDCF7A7007F9241 /* FaceView.swift */; };
+		232D9D491CDD6F59007F9241 /* triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D481CDD6F59007F9241 /* triangle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		232D9D301CDCF6A0007F9241 /* FaceIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		232D9D331CDCF6A0007F9241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		232D9D351CDCF6A0007F9241 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
+		232D9D381CDCF6A0007F9241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		232D9D3A1CDCF6A0007F9241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		232D9D3D1CDCF6A0007F9241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		232D9D3F1CDCF6A0007F9241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		232D9D461CDCF7A7007F9241 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		232D9D481CDD6F59007F9241 /* triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = triangle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		232D9D2D1CDCF6A0007F9241 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		232D9D271CDCF6A0007F9241 = {
+			isa = PBXGroup;
+			children = (
+				232D9D321CDCF6A0007F9241 /* FaceIt */,
+				232D9D311CDCF6A0007F9241 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		232D9D311CDCF6A0007F9241 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				232D9D301CDCF6A0007F9241 /* FaceIt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		232D9D321CDCF6A0007F9241 /* FaceIt */ = {
+			isa = PBXGroup;
+			children = (
+				232D9D351CDCF6A0007F9241 /* FaceViewController.swift */,
+				232D9D461CDCF7A7007F9241 /* FaceView.swift */,
+				232D9D481CDD6F59007F9241 /* triangle.swift */,
+				232D9D371CDCF6A0007F9241 /* Main.storyboard */,
+				232D9D451CDCF6B3007F9241 /* Supporting Files */,
+			);
+			path = FaceIt;
+			sourceTree = "<group>";
+		};
+		232D9D451CDCF6B3007F9241 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				232D9D331CDCF6A0007F9241 /* AppDelegate.swift */,
+				232D9D3A1CDCF6A0007F9241 /* Assets.xcassets */,
+				232D9D3C1CDCF6A0007F9241 /* LaunchScreen.storyboard */,
+				232D9D3F1CDCF6A0007F9241 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		232D9D2F1CDCF6A0007F9241 /* FaceIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 232D9D421CDCF6A0007F9241 /* Build configuration list for PBXNativeTarget "FaceIt" */;
+			buildPhases = (
+				232D9D2C1CDCF6A0007F9241 /* Sources */,
+				232D9D2D1CDCF6A0007F9241 /* Frameworks */,
+				232D9D2E1CDCF6A0007F9241 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceIt;
+			productName = FaceIt;
+			productReference = 232D9D301CDCF6A0007F9241 /* FaceIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		232D9D281CDCF6A0007F9241 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Stanford University";
+				TargetAttributes = {
+					232D9D2F1CDCF6A0007F9241 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 232D9D2B1CDCF6A0007F9241 /* Build configuration list for PBXProject "FaceIt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 232D9D271CDCF6A0007F9241;
+			productRefGroup = 232D9D311CDCF6A0007F9241 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				232D9D2F1CDCF6A0007F9241 /* FaceIt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		232D9D2E1CDCF6A0007F9241 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				232D9D3E1CDCF6A0007F9241 /* LaunchScreen.storyboard in Resources */,
+				232D9D3B1CDCF6A0007F9241 /* Assets.xcassets in Resources */,
+				232D9D391CDCF6A0007F9241 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		232D9D2C1CDCF6A0007F9241 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				232D9D361CDCF6A0007F9241 /* FaceViewController.swift in Sources */,
+				232D9D341CDCF6A0007F9241 /* AppDelegate.swift in Sources */,
+				232D9D471CDCF7A7007F9241 /* FaceView.swift in Sources */,
+				232D9D491CDD6F59007F9241 /* triangle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		232D9D371CDCF6A0007F9241 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				232D9D381CDCF6A0007F9241 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		232D9D3C1CDCF6A0007F9241 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				232D9D3D1CDCF6A0007F9241 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		232D9D401CDCF6A0007F9241 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		232D9D411CDCF6A0007F9241 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		232D9D431CDCF6A0007F9241 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FaceIt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		232D9D441CDCF6A0007F9241 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FaceIt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		232D9D2B1CDCF6A0007F9241 /* Build configuration list for PBXProject "FaceIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				232D9D401CDCF6A0007F9241 /* Debug */,
+				232D9D411CDCF6A0007F9241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		232D9D421CDCF6A0007F9241 /* Build configuration list for PBXNativeTarget "FaceIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				232D9D431CDCF6A0007F9241 /* Debug */,
+				232D9D441CDCF6A0007F9241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 232D9D281CDCF6A0007F9241 /* Project object */;
+}
