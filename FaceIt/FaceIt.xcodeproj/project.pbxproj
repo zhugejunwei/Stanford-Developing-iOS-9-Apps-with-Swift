@@ -14,6 +14,7 @@
 		232D9D3E1CDCF6A0007F9241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232D9D3C1CDCF6A0007F9241 /* LaunchScreen.storyboard */; };
 		232D9D471CDCF7A7007F9241 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D461CDCF7A7007F9241 /* FaceView.swift */; };
 		232D9D491CDD6F59007F9241 /* triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D481CDD6F59007F9241 /* triangle.swift */; };
+		23B5424B1CDE686300E2A24E /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5424A1CDE686300E2A24E /* FacialExpression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		232D9D3F1CDCF6A0007F9241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		232D9D461CDCF7A7007F9241 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		232D9D481CDD6F59007F9241 /* triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = triangle.swift; sourceTree = "<group>"; };
+		23B5424A1CDE686300E2A24E /* FacialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				232D9D351CDCF6A0007F9241 /* FaceViewController.swift */,
 				232D9D461CDCF7A7007F9241 /* FaceView.swift */,
+				23B5424A1CDE686300E2A24E /* FacialExpression.swift */,
 				232D9D481CDD6F59007F9241 /* triangle.swift */,
 				232D9D371CDCF6A0007F9241 /* Main.storyboard */,
 				232D9D451CDCF6B3007F9241 /* Supporting Files */,
@@ -151,6 +154,7 @@
 			files = (
 				232D9D361CDCF6A0007F9241 /* FaceViewController.swift in Sources */,
 				232D9D341CDCF6A0007F9241 /* AppDelegate.swift in Sources */,
+				23B5424B1CDE686300E2A24E /* FacialExpression.swift in Sources */,
 				232D9D471CDCF7A7007F9241 /* FaceView.swift in Sources */,
 				232D9D491CDD6F59007F9241 /* triangle.swift in Sources */,
 			);
@@ -304,6 +308,7 @@
 				232D9D441CDCF6A0007F9241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
