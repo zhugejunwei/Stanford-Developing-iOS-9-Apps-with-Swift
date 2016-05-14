@@ -13,7 +13,7 @@
 		232D9D3B1CDCF6A0007F9241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232D9D3A1CDCF6A0007F9241 /* Assets.xcassets */; };
 		232D9D3E1CDCF6A0007F9241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232D9D3C1CDCF6A0007F9241 /* LaunchScreen.storyboard */; };
 		232D9D471CDCF7A7007F9241 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D461CDCF7A7007F9241 /* FaceView.swift */; };
-		232D9D491CDD6F59007F9241 /* triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D481CDD6F59007F9241 /* triangle.swift */; };
+		234C4F7E1CE7A03000E6259E /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234C4F7D1CE7A03000E6259E /* EmotionsViewController.swift */; };
 		23B5424B1CDE686300E2A24E /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5424A1CDE686300E2A24E /* FacialExpression.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		232D9D3D1CDCF6A0007F9241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		232D9D3F1CDCF6A0007F9241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		232D9D461CDCF7A7007F9241 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
-		232D9D481CDD6F59007F9241 /* triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = triangle.swift; sourceTree = "<group>"; };
+		234C4F7D1CE7A03000E6259E /* EmotionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 		23B5424A1CDE686300E2A24E /* FacialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,8 +63,8 @@
 				232D9D351CDCF6A0007F9241 /* FaceViewController.swift */,
 				232D9D461CDCF7A7007F9241 /* FaceView.swift */,
 				23B5424A1CDE686300E2A24E /* FacialExpression.swift */,
-				232D9D481CDD6F59007F9241 /* triangle.swift */,
 				232D9D371CDCF6A0007F9241 /* Main.storyboard */,
+				234C4F7D1CE7A03000E6259E /* EmotionsViewController.swift */,
 				232D9D451CDCF6B3007F9241 /* Supporting Files */,
 			);
 			path = FaceIt;
@@ -154,9 +154,9 @@
 			files = (
 				232D9D361CDCF6A0007F9241 /* FaceViewController.swift in Sources */,
 				232D9D341CDCF6A0007F9241 /* AppDelegate.swift in Sources */,
+				234C4F7E1CE7A03000E6259E /* EmotionsViewController.swift in Sources */,
 				23B5424B1CDE686300E2A24E /* FacialExpression.swift in Sources */,
 				232D9D471CDCF7A7007F9241 /* FaceView.swift in Sources */,
-				232D9D491CDD6F59007F9241 /* triangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
