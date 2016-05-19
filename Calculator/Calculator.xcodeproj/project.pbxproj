@@ -14,6 +14,7 @@
 		230AD7D31CD6D2C2001B9E92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230AD7D11CD6D2C2001B9E92 /* LaunchScreen.storyboard */; };
 		230AD7DE1CD6D2C3001B9E92 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AD7DD1CD6D2C3001B9E92 /* CalculatorTests.swift */; };
 		230AD7E91CD6D2C3001B9E92 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AD7E81CD6D2C3001B9E92 /* CalculatorUITests.swift */; };
+		23163A231CED2F300046FFCF /* AxesDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23163A221CED2F300046FFCF /* AxesDrawer.swift */; };
 		232D9D261CDA8E6A007F9241 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D251CDA8E6A007F9241 /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		230AD7E41CD6D2C3001B9E92 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		230AD7E81CD6D2C3001B9E92 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		230AD7EA1CD6D2C3001B9E92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23163A221CED2F300046FFCF /* AxesDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesDrawer.swift; sourceTree = "<group>"; };
 		232D9D251CDA8E6A007F9241 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		230AD7C71CD6D2C2001B9E92 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				23163A221CED2F300046FFCF /* AxesDrawer.swift */,
 				232D9D251CDA8E6A007F9241 /* CalculatorBrain.swift */,
 				230AD7CA1CD6D2C2001B9E92 /* ViewController.swift */,
 				230AD7CC1CD6D2C2001B9E92 /* Main.storyboard */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				232D9D261CDA8E6A007F9241 /* CalculatorBrain.swift in Sources */,
+				23163A231CED2F300046FFCF /* AxesDrawer.swift in Sources */,
 				230AD7CB1CD6D2C2001B9E92 /* ViewController.swift in Sources */,
 				230AD7C91CD6D2C2001B9E92 /* AppDelegate.swift in Sources */,
 			);

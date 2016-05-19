@@ -8,11 +8,29 @@
 
 import UIKit
 
+var calculatorCount = 0
+
 class ViewController: UIViewController {
 
     @IBOutlet private weak var display: UILabel!
     
     private var userIsInTheMiddleOfTypingNumber = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        calculatorCount += 1
+        print("Loaded up a new Calculator (Count = \(calculatorCount))")
+        brain.addUnaryOperation("Red√") { [unowned me = self] in
+            me.display.textColor = UIColor.redColor()
+            return sqrt($0)
+        }
+    }
+    
+    deinit {
+        calculatorCount -= 1
+        print("Calculator left the heap (Count = \(calculatorCount))")
+
+    }
     
     @IBAction private func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
