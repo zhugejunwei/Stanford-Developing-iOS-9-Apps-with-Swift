@@ -2,14 +2,14 @@
 //  RatingControl.swift
 //  FoodTracker
 //
-//  Created by 诸葛俊伟 on 5/12/16.
-//  Copyright © 2016 Stanford University. All rights reserved.
+//  Created by Jane Appleseed on 5/26/15.
+//  Copyright © 2015 Apple Inc. All rights reserved.
+//  See LICENSE.txt for this sample’s licensing information.
 //
 
 import UIKit
 
 class RatingControl: UIView {
-    
     // MARK: Properties
     
     var rating = 0 {
@@ -17,10 +17,9 @@ class RatingControl: UIView {
             setNeedsLayout()
         }
     }
-    
     var ratingButtons = [UIButton]()
-    let spacing = 5
-    let startCount = 5
+    var spacing = 5
+    var stars = 5
     
     // MARK: Initialization
     
@@ -30,7 +29,7 @@ class RatingControl: UIView {
         let filledStarImage = UIImage(named: "filledStar")
         let emptyStarImage = UIImage(named: "emptyStar")
         
-        for _ in 0..<startCount {
+        for _ in 0..<5 {
             let button = UIButton()
             
             button.setImage(emptyStarImage, forState: .Normal)
@@ -50,18 +49,17 @@ class RatingControl: UIView {
         let buttonSize = Int(frame.size.height)
         var buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
         
-        // Offset each button's origin by the length of the button plus some spacing.
+        // Offset each button's origin by the length of the button plus spacing.
         for (index, button) in ratingButtons.enumerate() {
-            buttonFrame.origin.x = CGFloat(index * (buttonSize + 5))
+            buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
             button.frame = buttonFrame
         }
-        
         updateButtonSelectionStates()
     }
-
+    
     override func intrinsicContentSize() -> CGSize {
         let buttonSize = Int(frame.size.height)
-        let width = (buttonSize * startCount) + (spacing * (startCount - 1))
+        let width = (buttonSize + spacing) * stars
         
         return CGSize(width: width, height: buttonSize)
     }
@@ -80,5 +78,4 @@ class RatingControl: UIView {
             button.selected = index < rating
         }
     }
-    
 }

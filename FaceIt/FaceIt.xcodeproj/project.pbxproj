@@ -60,11 +60,11 @@
 		232D9D321CDCF6A0007F9241 /* FaceIt */ = {
 			isa = PBXGroup;
 			children = (
-				232D9D351CDCF6A0007F9241 /* FaceViewController.swift */,
-				232D9D461CDCF7A7007F9241 /* FaceView.swift */,
 				23B5424A1CDE686300E2A24E /* FacialExpression.swift */,
-				232D9D371CDCF6A0007F9241 /* Main.storyboard */,
 				234C4F7D1CE7A03000E6259E /* EmotionsViewController.swift */,
+				232D9D461CDCF7A7007F9241 /* FaceView.swift */,
+				232D9D351CDCF6A0007F9241 /* FaceViewController.swift */,
+				232D9D371CDCF6A0007F9241 /* Main.storyboard */,
 				232D9D451CDCF6B3007F9241 /* Supporting Files */,
 			);
 			path = FaceIt;

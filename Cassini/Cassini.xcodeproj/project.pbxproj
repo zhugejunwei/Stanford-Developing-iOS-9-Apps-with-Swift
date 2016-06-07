@@ -14,6 +14,7 @@
 		23163A111CED0AB70046FFCF /* CassiniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23163A101CED0AB70046FFCF /* CassiniTests.swift */; };
 		23163A1D1CED0B5B0046FFCF /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23163A1C1CED0B5B0046FFCF /* ImageViewController.swift */; };
 		23163A1F1CED0F570046FFCF /* DemoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23163A1E1CED0F570046FFCF /* DemoURL.swift */; };
+		237B63CE1CF0DDE600E7DBDB /* CassiniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B63CD1CF0DDE600E7DBDB /* CassiniViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		23163A121CED0AB70046FFCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23163A1C1CED0B5B0046FFCF /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		23163A1E1CED0F570046FFCF /* DemoURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoURL.swift; sourceTree = "<group>"; };
+		237B63CD1CF0DDE600E7DBDB /* CassiniViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CassiniViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				23163A1C1CED0B5B0046FFCF /* ImageViewController.swift */,
 				23163A1E1CED0F570046FFCF /* DemoURL.swift */,
 				231639FF1CED0AB60046FFCF /* Main.storyboard */,
+				237B63CD1CF0DDE600E7DBDB /* CassiniViewController.swift */,
 				23163A071CED0AB70046FFCF /* Info.plist */,
 				23163A1B1CED0ADD0046FFCF /* Supporting Files */,
 			);
@@ -211,6 +214,7 @@
 				23163A1D1CED0B5B0046FFCF /* ImageViewController.swift in Sources */,
 				231639FC1CED0AB60046FFCF /* AppDelegate.swift in Sources */,
 				23163A1F1CED0F570046FFCF /* DemoURL.swift in Sources */,
+				237B63CE1CF0DDE600E7DBDB /* CassiniViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +406,7 @@
 				23163A171CED0AB70046FFCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23163A181CED0AB70046FFCF /* Build configuration list for PBXNativeTarget "CassiniTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +415,7 @@
 				23163A1A1CED0AB70046FFCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
