@@ -15,7 +15,7 @@ class ExampleIViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     @IBAction func login(sender: UIButton) {
-        
+         
         let bounds = self.loginButton.bounds
         UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: {
             self.loginButton.bounds = CGRect(x: bounds.origin.x - 20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)

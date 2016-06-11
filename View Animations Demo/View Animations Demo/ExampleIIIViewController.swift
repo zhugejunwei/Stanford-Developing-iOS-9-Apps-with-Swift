@@ -31,7 +31,7 @@ class ExampleIIIViewController: UIViewController {
         
         // Create an image view and add it to this view
         let imageView = UIImageView(frame: CGRectMake(0, 0, alertWidth, alertHeight/2))
-        imageView.image = UIImage(named: "bike_traveler.png")
+        imageView.image = UIImage(named: "sexy")
         alertView.addSubview(imageView)
         
         // Create a button and set a listener on it for when it is tapped. Then the button is added to the alert view
