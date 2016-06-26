@@ -90,7 +90,6 @@ class DropitView: NamedBezierPathsView, UIDynamicAnimatorDelegate
     }
     
     
-    
     private struct PathNames {
         static let MiddleBarrier = "MiddleBarrier"
         static let Attachment = "Attachment"

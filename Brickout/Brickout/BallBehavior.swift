@@ -24,7 +24,7 @@ class BallBehavior: UIDynamicBehavior
         return dib
     }()
 
-    func addBarrier(path: UIBezierPath, named name: String) {
+    func addBarrier(path: UIBezierPath, named name: Int) {
         collider.removeBoundaryWithIdentifier(name)
         collider.addBoundaryWithIdentifier(name, forPath: path)
     }

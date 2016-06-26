@@ -15,8 +15,6 @@
 		2388C1D91D148F0100E35208 /* BrickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388C1D81D148F0100E35208 /* BrickView.swift */; };
 		2388C1DD1D148F7200E35208 /* UIKit Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388C1DC1D148F7200E35208 /* UIKit Extension.swift */; };
 		2388C1E11D14986800E35208 /* NamedBezierPathViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388C1E01D14986800E35208 /* NamedBezierPathViews.swift */; };
-		2388C1E31D14A8E400E35208 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388C1E21D14A8E400E35208 /* BoardView.swift */; };
-		2388C1E51D14A8FE00E35208 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388C1E41D14A8FE00E35208 /* BoardViewController.swift */; };
 		23DBAA6D1D17071100F0E7B4 /* BallBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DBAA6C1D17071100F0E7B4 /* BallBehavior.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +29,6 @@
 		2388C1D81D148F0100E35208 /* BrickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickView.swift; sourceTree = "<group>"; };
 		2388C1DC1D148F7200E35208 /* UIKit Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit Extension.swift"; sourceTree = "<group>"; };
 		2388C1E01D14986800E35208 /* NamedBezierPathViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedBezierPathViews.swift; sourceTree = "<group>"; };
-		2388C1E21D14A8E400E35208 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
-		2388C1E41D14A8FE00E35208 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		23DBAA6C1D17071100F0E7B4 /* BallBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,12 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				2388C1D81D148F0100E35208 /* BrickView.swift */,
+				2388C1D61D148EC800E35208 /* BrickViewController.swift */,
 				2388C1E01D14986800E35208 /* NamedBezierPathViews.swift */,
 				2388C1DC1D148F7200E35208 /* UIKit Extension.swift */,
-				2388C1D61D148EC800E35208 /* BrickViewController.swift */,
 				23DBAA6C1D17071100F0E7B4 /* BallBehavior.swift */,
-				2388C1E21D14A8E400E35208 /* BoardView.swift */,
-				2388C1E41D14A8FE00E35208 /* BoardViewController.swift */,
 				2388C1C51D148E5E00E35208 /* Main.storyboard */,
 				2388C1D31D148E6500E35208 /* Supporting Files */,
 			);
@@ -122,6 +116,7 @@
 				TargetAttributes = {
 					2388C1BD1D148E5E00E35208 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KMHYCH2A7R;
 					};
 				};
 			};
@@ -162,11 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				23DBAA6D1D17071100F0E7B4 /* BallBehavior.swift in Sources */,
-				2388C1E51D14A8FE00E35208 /* BoardViewController.swift in Sources */,
 				2388C1D71D148EC800E35208 /* BrickViewController.swift in Sources */,
 				2388C1C21D148E5E00E35208 /* AppDelegate.swift in Sources */,
 				2388C1DD1D148F7200E35208 /* UIKit Extension.swift in Sources */,
-				2388C1E31D14A8E400E35208 /* BoardView.swift in Sources */,
 				2388C1E11D14986800E35208 /* NamedBezierPathViews.swift in Sources */,
 				2388C1D91D148F0100E35208 /* BrickView.swift in Sources */,
 			);
@@ -283,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Brickout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.Brickout;
@@ -294,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Brickout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.Brickout;

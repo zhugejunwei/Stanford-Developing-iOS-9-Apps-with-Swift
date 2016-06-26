@@ -12,13 +12,19 @@ import CoreMotion
 @IBDesignable
 class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
 {
+    private var boardSize: CGSize {
+        let width = bounds.size.width / 4
+        let height = width / 8
+        return CGSize(width: width, height: height)
+    }
+    
     private lazy var animator: UIDynamicAnimator = {
         let animator = UIDynamicAnimator(referenceView: self)
         animator.delegate = self
         return animator
     }()
     
-    let ballBehavior = BallBehavior()
+    private let ballBehavior = BallBehavior()
     
     var animating = false {
         didSet {
@@ -27,6 +33,19 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
                 updateRealGravity()
             } else {
                 animator.removeBehavior(ballBehavior)
+            }
+        }
+    }
+    
+    private var attachment: UIAttachmentBehavior? {
+        willSet {
+            if attachment != nil {
+                animator.removeBehavior(attachment!)
+            }
+        }
+        didSet {
+            if attachment != nil {
+                animator.addBehavior(attachment!)
             }
         }
     }
@@ -90,10 +109,13 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
         static let Brick = 0...35
         static let Barrier = 36
         static let Board = 50
+        static let Ball = 51
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        // Bricks Location
         appendBrickArray()
         for rows in 0...5 {
             for bricks in 0...5 {
@@ -103,9 +125,59 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
             }
         }
         
-        // Barrier's location
-        let barrierPath = UIBezierPath(ovalInRect: CGRect(center: CGPoint(x: bounds.mid.x, y: 10*brickSize.height), size: brickSize))
+        // Barrier Location
+        let barrierPath = UIBezierPath(ovalInRect: CGRect(center: CGPoint(x: bounds.mid.x, y: 10 * brickSize.height), size: brickSize))
+        ballBehavior.addBarrier(barrierPath, named: PathInts.Barrier)
         bezierPath[PathInts.Barrier] = barrierPath
+        
+        // Board Location
+        let boardPath = UIBezierPath(roundedRect: CGRect(origin: CGPoint(x: bounds.mid.x, y: bounds.size.height - boardSize.height), size: boardSize), cornerRadius: 50)
+        
+        bezierPath[PathInts.Board] = boardPath
+        
+        // Ball Location
+//        let ballPath = UIBezierPath(arcCenter: CGPoint(x: bounds.mid.x + boardSize.width / 2, y: bounds.size.height - boardSize.height - boardSize.height/1.5), radius: boardSize.height/1.5, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+//        bezierPath[PathInts.Ball] = ballPath
     }
     
+    func startBall(recognizer: UITapGestureRecognizer) {
+        
+    }
+//    
+//    override func drawRect(rect: CGRect) {
+//        addBall()
+//    }
+//    
+//    func addBall() -> ()
+//    {
+//        let ballPath = UIBezierPath(arcCenter: CGPoint(x: bounds.mid.x + boardSize.width / 2, y: bounds.size.height - boardSize.height - boardSize.height/1.5), radius: boardSize.height/1.5, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
+//        
+//        let frame = CGRect(
+//        
+//        let ball = UIView()
+//
+//        
+//        ballBehavior.addItem(ball)
+//    }
+    
+
+    
+    
+//    func moveBoard(recognizer: UIPanGestureRecognizer) {
+//        let gesturePoint = recognizer.locationInView(self)
+//        switch recognizer.state {
+//        case .Began:
+//            // create attachment
+//            if let boardToAttachTo = movedBoard where boardToAttachTo.superview != nil {
+//                attachment = UIAttachmentBehavior(item: boardToAttachTo, attachedToAnchor: gesturePoint)
+//            }
+//        //            lastDrop = nil
+//        case .Changed:
+//            // create attachment's anchor point
+//            attachment!.anchorPoint = gesturePoint
+//        default:
+//            attachment = nil
+//        }
+//        
+//    }
 }

@@ -10,13 +10,13 @@ import UIKit
 
 class BrickViewController: UIViewController
 {
-    @IBOutlet weak var gameView: BrickView!
-    @IBOutlet weak var boardView: BoardView! {
+    @IBOutlet weak var gameView: BrickView! {
         didSet {
-            boardView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(BoardView.moveBoard(_:))))
+            gameView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gameView.startBall(_:))))
         }
     }
     
+
     
     override func viewWillAppear(animated: Bool) {
 //        boardView.addBoard()
