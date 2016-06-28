@@ -67,7 +67,6 @@
 				2388C1E01D14986800E35208 /* NamedBezierPathViews.swift */,
 				2388C1DC1D148F7200E35208 /* UIKit Extension.swift */,
 				23DBAA6C1D17071100F0E7B4 /* BallBehavior.swift */,
-				2388C1C51D148E5E00E35208 /* Main.storyboard */,
 				2388C1D31D148E6500E35208 /* Supporting Files */,
 			);
 			path = Brickout;
@@ -76,6 +75,7 @@
 		2388C1D31D148E6500E35208 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2388C1C51D148E5E00E35208 /* Main.storyboard */,
 				2388C1C11D148E5E00E35208 /* AppDelegate.swift */,
 				2388C1C81D148E5E00E35208 /* Assets.xcassets */,
 				2388C1CA1D148E5E00E35208 /* LaunchScreen.storyboard */,

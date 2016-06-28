@@ -12,15 +12,14 @@ class BrickViewController: UIViewController
 {
     @IBOutlet weak var gameView: BrickView! {
         didSet {
-            gameView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gameView.startBall(_:))))
+            gameView.addGestureRecognizer(UITapGestureRecognizer(target: gameView, action: #selector(gameView.startBall(_:))))
         }
     }
     
-
-    
-    override func viewWillAppear(animated: Bool) {
-//        boardView.addBoard()
+    override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        gameView.addBoard()
+        gameView.addBall()
         gameView.animating = true
     }
 

@@ -10,16 +10,21 @@ import UIKit
 
 class NamedBezierPathViews: UIView
 {
-    var strokeColor = UIColor.blackColor()
     var bezierPath = [Int:UIBezierPath]() { didSet { setNeedsDisplay() } }
     
     override func drawRect(rect: CGRect) {
-        for (_, path) in bezierPath {
-            UIColor.random.setFill()
-            path.fill()
-            strokeColor.setStroke()
-            path.lineWidth = 2.0
-            path.stroke()
+        for (int, path) in bezierPath {
+            if int == 36 {
+                UIColor.redColor().setFill()
+                path.fill()
+                UIColor.cyanColor().setStroke()
+                path.stroke()
+            } else {
+                UIColor.random.setFill()
+                path.fill()
+                UIColor.darkGrayColor().setStroke()
+                path.stroke()
+            }
         }
     }
     

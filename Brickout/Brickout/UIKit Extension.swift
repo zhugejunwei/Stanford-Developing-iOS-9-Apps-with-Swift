@@ -22,7 +22,7 @@ extension UIColor {
         case 2: return UIColor.lightGrayColor()
         case 3: return UIColor.orangeColor()
         case 4: return UIColor.yellowColor()
-        default: return UIColor.redColor()
+        default: return UIColor.darkGrayColor()
         }
     }
 }

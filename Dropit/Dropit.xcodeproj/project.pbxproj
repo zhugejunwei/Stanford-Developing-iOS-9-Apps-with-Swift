@@ -63,10 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				2377CCF71D1319CC00D164DB /* DropitView.swift */,
+				2377CCF51D13199E00D164DB /* DropitViewController.swift */,
 				2377CCFD1D13359B00D164DB /* NamedBezierPathsView.swift */,
 				2377CCFB1D13298500D164DB /* FallingObjectBehavior.swift */,
 				2377CCF91D131CA900D164DB /* UIKit Extension.swift */,
-				2377CCF51D13199E00D164DB /* DropitViewController.swift */,
 				2377CCE21D1315DA00D164DB /* Main.storyboard */,
 				2377CCF01D13161700D164DB /* Supporting Files */,
 			);

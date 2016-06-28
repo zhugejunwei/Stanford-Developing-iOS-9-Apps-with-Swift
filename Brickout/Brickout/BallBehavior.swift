@@ -20,7 +20,7 @@ class BallBehavior: UIDynamicBehavior
     private let itemBehavior: UIDynamicItemBehavior = {
         let dib = UIDynamicItemBehavior()
         dib.allowsRotation = true
-        dib.elasticity = 0.75
+        dib.elasticity = 1.0
         return dib
     }()
 
@@ -34,6 +34,10 @@ class BallBehavior: UIDynamicBehavior
         addChildBehavior(gravity)
         addChildBehavior(collider)
         addChildBehavior(itemBehavior)
+    }
+    
+    func addBoard(item: UIDynamicItem) {
+        collider.addItem(item)
     }
     
     func addItem(item: UIDynamicItem) {

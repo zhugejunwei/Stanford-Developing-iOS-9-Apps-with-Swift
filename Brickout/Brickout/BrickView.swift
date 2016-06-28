@@ -18,6 +18,12 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
         return CGSize(width: width, height: height)
     }
     
+    private var ballSize: CGSize {
+        let width = boardSize.height
+        let height = width
+        return CGSize(width: width, height: height)
+    }
+    
     private lazy var animator: UIDynamicAnimator = {
         let animator = UIDynamicAnimator(referenceView: self)
         animator.delegate = self
@@ -30,7 +36,7 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
         didSet {
             if animating {
                 animator.addBehavior(ballBehavior)
-                updateRealGravity()
+//                updateRealGravity()
             } else {
                 animator.removeBehavior(ballBehavior)
             }
@@ -50,40 +56,40 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
         }
     }
     
-    var realGravity: Bool = false {
-        didSet {
-            updateRealGravity()
-        }
-    }
+//    var realGravity: Bool = false {
+//        didSet {
+//            updateRealGravity()
+//        }
+//    }
     
     private let motionManager = CMMotionManager()
     
-    func updateRealGravity() {
-        if realGravity {
-            if motionManager.accelerometerAvailable && !motionManager.accelerometerActive {
-                motionManager.accelerometerUpdateInterval = 0.25
-                motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue())
-                { (data, error) in
-                    if self.ballBehavior.dynamicAnimator != nil {
-                        if var dx = data?.acceleration.x, var dy = data?.acceleration.y {
-                            switch UIDevice.currentDevice().orientation {
-                            case .Portrait: dy = -dy
-                            case .PortraitUpsideDown: break
-                            case .LandscapeRight: swap(&dx, &dy)
-                            case .LandscapeLeft: swap(&dx, &dy); dy = -dy
-                            default: dx = 0; dy = 0;
-                            }
-                            self.ballBehavior.gravity.gravityDirection = CGVector(dx: dx, dy: dy)
-                        }
-                    } else {
-                        self.motionManager.stopAccelerometerUpdates()
-                    }
-                }
-            }
-        } else {
-            motionManager.stopAccelerometerUpdates()
-        }
-    }
+//    func updateRealGravity() {
+//        if realGravity {
+//            if motionManager.accelerometerAvailable && !motionManager.accelerometerActive {
+//                motionManager.accelerometerUpdateInterval = 0.25
+//                motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue())
+//                { (data, error) in
+//                    if self.ballBehavior.dynamicAnimator != nil {
+//                        if var dx = data?.acceleration.x, var dy = data?.acceleration.y {
+//                            switch UIDevice.currentDevice().orientation {
+//                            case .Portrait: dy = -dy
+//                            case .PortraitUpsideDown: break
+//                            case .LandscapeRight: swap(&dx, &dy)
+//                            case .LandscapeLeft: swap(&dx, &dy); dy = -dy
+//                            default: dx = 0; dy = 0;
+//                            }
+//                            self.ballBehavior.gravity.gravityDirection = CGVector(dx: dx, dy: dy)
+//                        }
+//                    } else {
+//                        self.motionManager.stopAccelerometerUpdates()
+//                    }
+//                }
+//            }
+//        } else {
+//            motionManager.stopAccelerometerUpdates()
+//        }
+//    }
     
     private let bricksPerRow = 6
     private var brickSize: CGSize {
@@ -95,7 +101,8 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
     var brickArray = [Array<Int>]()
     
     // Append Bricks to brickArray, Int from 0...35, 6 rows, 6 columns.
-    func appendBrickArray() {
+    func appendBrickArray() -> [Array<Int>]
+    {
         for column in 0...5 {
             var columnArray = Array<Int>()
             for row in 6*column...6*column+5 {
@@ -103,6 +110,7 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
             }
             brickArray.append(columnArray)
         }
+    return brickArray
     }
     
     struct PathInts {
@@ -112,56 +120,76 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
         static let Ball = 51
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        // Bricks Location
+    func addBricks()
+    {
         appendBrickArray()
         for rows in 0...5 {
             for bricks in 0...5 {
                 let startPoint = CGPoint(x: CGPoint.zero.x + CGFloat(bricks) * brickSize.width, y: CGPoint.zero.y + CGFloat(rows) * brickSize.height)
                 let brickPath = UIBezierPath(rect: CGRect(origin: startPoint, size: brickSize))
+                ballBehavior.addBarrier(brickPath, named: brickArray[rows][bricks])
                 bezierPath[brickArray[rows][bricks]] = brickPath
             }
         }
+    }
+    
+    override func layoutSubviews()
+    {
+        super.layoutSubviews()
         
-        // Barrier Location
+        addBricks()
+        
         let barrierPath = UIBezierPath(ovalInRect: CGRect(center: CGPoint(x: bounds.mid.x, y: 10 * brickSize.height), size: brickSize))
         ballBehavior.addBarrier(barrierPath, named: PathInts.Barrier)
         bezierPath[PathInts.Barrier] = barrierPath
+    }
+    
+    private var movedBall: UIView?
+    
+    func addBall()
+    {
+        var frame = CGRect(origin: CGPoint.zero, size: ballSize)
+        frame.origin.x = bounds.mid.x + boardSize.width / 2
+        frame.origin.y = bounds.size.height - boardSize.height - boardSize.height
         
-        // Board Location
-        let boardPath = UIBezierPath(roundedRect: CGRect(origin: CGPoint(x: bounds.mid.x, y: bounds.size.height - boardSize.height), size: boardSize), cornerRadius: 50)
+        let ball = UIView(frame: frame)
+        ball.backgroundColor = UIColor.blackColor()
+        ball.layer.cornerRadius = CGFloat(2 * M_PI)
         
-        bezierPath[PathInts.Board] = boardPath
+        addSubview(ball)
         
-        // Ball Location
-//        let ballPath = UIBezierPath(arcCenter: CGPoint(x: bounds.mid.x + boardSize.width / 2, y: bounds.size.height - boardSize.height - boardSize.height/1.5), radius: boardSize.height/1.5, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
-//        bezierPath[PathInts.Ball] = ballPath
+        ballBehavior.addItem(ball)
+        movedBall = ball
     }
     
     func startBall(recognizer: UITapGestureRecognizer) {
-        
+        if recognizer.state == .Ended {
+            pushBall([movedBall!])
+        }
     }
-//    
-//    override func drawRect(rect: CGRect) {
-//        addBall()
-//    }
-//    
-//    func addBall() -> ()
-//    {
-//        let ballPath = UIBezierPath(arcCenter: CGPoint(x: bounds.mid.x + boardSize.width / 2, y: bounds.size.height - boardSize.height - boardSize.height/1.5), radius: boardSize.height/1.5, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
-//        
-//        let frame = CGRect(
-//        
-//        let ball = UIView()
-//
-//        
-//        ballBehavior.addItem(ball)
-//    }
     
-
+    func pushBall(ball: [UIView]) {
+        let push = UIPushBehavior(items: ball, mode: UIPushBehaviorMode.Instantaneous)
+        push.magnitude = 1.0
+        push.pushDirection = CGVector(dx: 2, dy: -2)
+        animator.removeBehavior(push)
+        animator.addBehavior(push)
+    }
     
+    func addBoard()
+    {
+        var frame = CGRect(origin: CGPoint.zero, size: boardSize)
+        frame.origin.x = bounds.mid.x
+        frame.origin.y = bounds.size.height - boardSize.height
+        
+        let board = UIView(frame: frame)
+        board.backgroundColor = UIColor.blueColor()
+        board.layer.cornerRadius = CGFloat(20)
+        
+        addSubview(board)
+        
+        ballBehavior.addBoard(board)
+    }
     
 //    func moveBoard(recognizer: UIPanGestureRecognizer) {
 //        let gesturePoint = recognizer.locationInView(self)
