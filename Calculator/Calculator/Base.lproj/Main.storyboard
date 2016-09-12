@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LNd-t8-UKT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LNd-t8-UKT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -78,14 +79,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="p8D-Gc-k0F">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="p8D-Gc-k0F">
                                 <rect key="frame" x="20" y="72" width="560" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xq0-ob-Pwd">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xq0-ob-Pwd">
                                 <rect key="frame" x="286" y="358" width="294" height="222"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eIp-Y6-Btp">
@@ -254,7 +255,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nRs-J9-3Oh">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nRs-J9-3Oh">
                                 <rect key="frame" x="20" y="128" width="350" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGJ-ya-04G">
@@ -295,7 +296,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W0q-OC-Dc9">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W0q-OC-Dc9">
                                 <rect key="frame" x="20" y="128" width="350" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCs-gv-Vdt">
@@ -385,18 +386,18 @@
                             <mask key="constraints">
                                 <exclude reference="E3J-IX-PK5"/>
                                 <exclude reference="gCA-S1-vEO"/>
-                                <exclude reference="0DW-IL-kJh"/>
-                                <exclude reference="7kx-KC-1fo"/>
-                                <exclude reference="eYM-qm-8JV"/>
-                                <exclude reference="lAH-4j-TKQ"/>
-                                <exclude reference="wOg-aa-Q5Z"/>
-                                <exclude reference="xP1-29-OY6"/>
                                 <exclude reference="Jab-HV-RXJ"/>
                                 <exclude reference="OLg-T5-Ufh"/>
                                 <exclude reference="fEV-jL-xY7"/>
                                 <exclude reference="fep-O1-WT4"/>
                                 <exclude reference="mtP-gi-3Bm"/>
                                 <exclude reference="uh5-tf-hLy"/>
+                                <exclude reference="0DW-IL-kJh"/>
+                                <exclude reference="7kx-KC-1fo"/>
+                                <exclude reference="eYM-qm-8JV"/>
+                                <exclude reference="lAH-4j-TKQ"/>
+                                <exclude reference="wOg-aa-Q5Z"/>
+                                <exclude reference="xP1-29-OY6"/>
                                 <exclude reference="1zq-j2-dhv"/>
                                 <exclude reference="PXQ-kg-YI8"/>
                                 <exclude reference="R8g-go-HvT"/>
@@ -415,15 +416,15 @@
                                 <include reference="nRs-J9-3Oh"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="7kx-KC-1fo"/>
-                                <include reference="lAH-4j-TKQ"/>
-                                <include reference="wOg-aa-Q5Z"/>
                                 <include reference="Jab-HV-RXJ"/>
                                 <include reference="OLg-T5-Ufh"/>
                                 <include reference="fEV-jL-xY7"/>
                                 <exclude reference="fep-O1-WT4"/>
                                 <exclude reference="mtP-gi-3Bm"/>
                                 <include reference="uh5-tf-hLy"/>
+                                <include reference="7kx-KC-1fo"/>
+                                <include reference="lAH-4j-TKQ"/>
+                                <include reference="wOg-aa-Q5Z"/>
                                 <include reference="1zq-j2-dhv"/>
                                 <include reference="PXQ-kg-YI8"/>
                                 <include reference="R8g-go-HvT"/>

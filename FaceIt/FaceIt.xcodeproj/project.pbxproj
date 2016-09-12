@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230BCFA11D7DEB5E00D8FF5C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BCFA01D7DEB5E00D8FF5C /* NotificationCenter.framework */; };
+		230BCFA41D7DEB5E00D8FF5C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230BCFA31D7DEB5E00D8FF5C /* TodayViewController.swift */; };
+		230BCFA71D7DEB5E00D8FF5C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230BCFA51D7DEB5E00D8FF5C /* MainInterface.storyboard */; };
+		230BCFAB1D7DEB5E00D8FF5C /* TestExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 230BCF9E1D7DEB5E00D8FF5C /* TestExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		232D9D341CDCF6A0007F9241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D331CDCF6A0007F9241 /* AppDelegate.swift */; };
 		232D9D361CDCF6A0007F9241 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D351CDCF6A0007F9241 /* FaceViewController.swift */; };
 		232D9D391CDCF6A0007F9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232D9D371CDCF6A0007F9241 /* Main.storyboard */; };
@@ -21,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		230BCFA91D7DEB5E00D8FF5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 232D9D281CDCF6A0007F9241 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 230BCF9D1D7DEB5E00D8FF5C;
+			remoteInfo = TestExtension;
+		};
 		23AC892B1D121030009D3950 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 232D9D281CDCF6A0007F9241 /* Project object */;
@@ -37,6 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				230BCFAB1D7DEB5E00D8FF5C /* TestExtension.appex in Embed App Extensions */,
 				23AC892D1D121030009D3950 /* SimpleTimerTodayExtenstion.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -45,6 +57,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		230BCF9E1D7DEB5E00D8FF5C /* TestExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TestExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		230BCFA01D7DEB5E00D8FF5C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		230BCFA31D7DEB5E00D8FF5C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		230BCFA61D7DEB5E00D8FF5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		230BCFA81D7DEB5E00D8FF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		232D9D301CDCF6A0007F9241 /* FaceIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		232D9D331CDCF6A0007F9241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		232D9D351CDCF6A0007F9241 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +78,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		230BCF9B1D7DEB5E00D8FF5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230BCFA11D7DEB5E00D8FF5C /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		232D9D2D1CDCF6A0007F9241 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,10 +103,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230BCF9F1D7DEB5E00D8FF5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				230BCFA01D7DEB5E00D8FF5C /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		230BCFA21D7DEB5E00D8FF5C /* TestExtension */ = {
+			isa = PBXGroup;
+			children = (
+				230BCFA31D7DEB5E00D8FF5C /* TodayViewController.swift */,
+				230BCFA51D7DEB5E00D8FF5C /* MainInterface.storyboard */,
+				230BCFA81D7DEB5E00D8FF5C /* Info.plist */,
+			);
+			path = TestExtension;
+			sourceTree = "<group>";
+		};
 		232D9D271CDCF6A0007F9241 = {
 			isa = PBXGroup;
 			children = (
 				232D9D321CDCF6A0007F9241 /* FaceIt */,
+				230BCFA21D7DEB5E00D8FF5C /* TestExtension */,
+				230BCF9F1D7DEB5E00D8FF5C /* Frameworks */,
 				232D9D311CDCF6A0007F9241 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +136,7 @@
 			children = (
 				232D9D301CDCF6A0007F9241 /* FaceIt.app */,
 				23AC89201D121030009D3950 /* SimpleTimerTodayExtenstion.appex */,
+				230BCF9E1D7DEB5E00D8FF5C /* TestExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +170,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		230BCF9D1D7DEB5E00D8FF5C /* TestExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 230BCFAC1D7DEB5E00D8FF5C /* Build configuration list for PBXNativeTarget "TestExtension" */;
+			buildPhases = (
+				230BCF9A1D7DEB5E00D8FF5C /* Sources */,
+				230BCF9B1D7DEB5E00D8FF5C /* Frameworks */,
+				230BCF9C1D7DEB5E00D8FF5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestExtension;
+			productName = TestExtension;
+			productReference = 230BCF9E1D7DEB5E00D8FF5C /* TestExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		232D9D2F1CDCF6A0007F9241 /* FaceIt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 232D9D421CDCF6A0007F9241 /* Build configuration list for PBXNativeTarget "FaceIt" */;
@@ -137,6 +200,7 @@
 			);
 			dependencies = (
 				23AC892C1D121030009D3950 /* PBXTargetDependency */,
+				230BCFAA1D7DEB5E00D8FF5C /* PBXTargetDependency */,
 			);
 			name = FaceIt;
 			productName = FaceIt;
@@ -170,6 +234,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Stanford University";
 				TargetAttributes = {
+					230BCF9D1D7DEB5E00D8FF5C = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KMHYCH2A7R;
+					};
 					232D9D2F1CDCF6A0007F9241 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KMHYCH2A7R;
@@ -205,11 +273,20 @@
 			targets = (
 				232D9D2F1CDCF6A0007F9241 /* FaceIt */,
 				23AC891F1D121030009D3950 /* SimpleTimerTodayExtenstion */,
+				230BCF9D1D7DEB5E00D8FF5C /* TestExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		230BCF9C1D7DEB5E00D8FF5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230BCFA71D7DEB5E00D8FF5C /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		232D9D2E1CDCF6A0007F9241 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +307,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		230BCF9A1D7DEB5E00D8FF5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230BCFA41D7DEB5E00D8FF5C /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		232D9D2C1CDCF6A0007F9241 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +339,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		230BCFAA1D7DEB5E00D8FF5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 230BCF9D1D7DEB5E00D8FF5C /* TestExtension */;
+			targetProxy = 230BCFA91D7DEB5E00D8FF5C /* PBXContainerItemProxy */;
+		};
 		23AC892C1D121030009D3950 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 23AC891F1D121030009D3950 /* SimpleTimerTodayExtenstion */;
@@ -262,6 +352,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		230BCFA51D7DEB5E00D8FF5C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				230BCFA61D7DEB5E00D8FF5C /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		232D9D371CDCF6A0007F9241 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -281,6 +379,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		230BCFAD1D7DEB5E00D8FF5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TestExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt.TestExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		230BCFAE1D7DEB5E00D8FF5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TestExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt.TestExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		232D9D401CDCF6A0007F9241 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -372,6 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FaceIt/FaceIt.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FaceIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt;
@@ -385,6 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FaceIt/FaceIt.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = FaceIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt;
@@ -419,6 +543,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		230BCFAC1D7DEB5E00D8FF5C /* Build configuration list for PBXNativeTarget "TestExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				230BCFAD1D7DEB5E00D8FF5C /* Debug */,
+				230BCFAE1D7DEB5E00D8FF5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		232D9D2B1CDCF6A0007F9241 /* Build configuration list for PBXProject "FaceIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
