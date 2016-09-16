@@ -12,17 +12,17 @@ class NamedBezierPathViews: UIView
 {
     var bezierPath = [Int:UIBezierPath]() { didSet { setNeedsDisplay() } }
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         for (int, path) in bezierPath {
             if int == 36 {
-                UIColor.redColor().setFill()
+                UIColor.red.setFill()
                 path.fill()
-                UIColor.cyanColor().setStroke()
+                UIColor.cyan.setStroke()
                 path.stroke()
             } else {
                 UIColor.random.setFill()
                 path.fill()
-                UIColor.darkGrayColor().setStroke()
+                UIColor.darkGray.setStroke()
                 path.stroke()
             }
         }

@@ -34,11 +34,11 @@ class ViewController: UIViewController, UITextFieldDelegate
         let blueColor = UIColor( red: 68.0/255, green: 126.0/255, blue:194.0/255, alpha: 1.0 )
         
         //Implementing Layers,Border Color & Width
-        emailTextField.layer.borderColor = blueColor.CGColor
+        emailTextField.layer.borderColor = blueColor.cgColor
         emailTextField.layer.borderWidth = 1
         emailTextField.layer.cornerRadius = 15
         
-        passwordTextField.layer.borderColor = blueColor.CGColor
+        passwordTextField.layer.borderColor = blueColor.cgColor
         passwordTextField.layer.borderWidth = 1
         passwordTextField.layer.cornerRadius = 15
         loginButton.layer.cornerRadius = 15
@@ -50,7 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         loginLabel.center.y -= view.bounds.width
         emailTextField.center.x -= view.bounds.width
         passwordTextField.center.x += view.bounds.width
@@ -62,7 +62,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         cloud4.alpha = 0.0
         
         // Login Label Animation
-        UIView.animateWithDuration(2.0, delay: 0.1,
+        UIView.animate(withDuration: 2.0, delay: 0.1,
                                    usingSpringWithDamping: 0.8,
                                    initialSpringVelocity: 0.3,
                                    options: [], animations: {
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         }, completion: nil)
     
         // Email and Password Animation
-        UIView.animateWithDuration(1.5, delay: 0.5,
+        UIView.animate(withDuration: 1.5, delay: 0.5,
                                    usingSpringWithDamping: 0.4,
                                    initialSpringVelocity: 0.5,
                                    options: [], animations: {
@@ -79,26 +79,26 @@ class ViewController: UIViewController, UITextFieldDelegate
             }, completion: nil)
         
         // Login Button Animation
-        UIView.animateWithDuration(1.5, delay: 2.0,
+        UIView.animate(withDuration: 1.5, delay: 2.0,
                                    options: [],
                                    animations: {
                                     self.loginButton.alpha = 1.0
             }, completion: nil)
         
         // Cloud Animation
-        UIView.animateWithDuration(0.5, delay: 0.6, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.6, options: [], animations: {
             self.cloud1.alpha = 1.0
             }, completion: nil)
         
-        UIView.animateWithDuration(0.5, delay: 0.8, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.8, options: [], animations: {
             self.cloud2.alpha = 1.0
             }, completion: nil)
         
-        UIView.animateWithDuration(0.5, delay: 1.0, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 1.0, options: [], animations: {
             self.cloud3.alpha = 1.0
             }, completion: nil)
         
-        UIView.animateWithDuration(0.5, delay: 1.5, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 1.5, options: [], animations: {
             self.cloud4.alpha = 1.0
             }, completion: nil)
         animateTheClouds(cloud1)
@@ -111,16 +111,16 @@ class ViewController: UIViewController, UITextFieldDelegate
     }
     
     // Resign First Responder
-    func textFieldShouldReturn(userText: UITextField) -> Bool {
+    func textFieldShouldReturn(_ userText: UITextField) -> Bool {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         return true;
     }
 
-    func animateTheClouds(cloud : UIImageView) {
+    func animateTheClouds(_ cloud : UIImageView) {
         let cloudMovingSpeed = 60.0/view.frame.size.width
         let duration = (view.frame.size.width - cloud.frame.origin.x) * cloudMovingSpeed
-        UIView.animateWithDuration(NSTimeInterval(duration), delay: 0.5, options: .CurveLinear, animations: {
+        UIView.animate(withDuration: TimeInterval(duration), delay: 0.5, options: .curveLinear, animations: {
             cloud.frame.origin.x = self.view.frame.size.width
             }, completion: {_ in
                 cloud.frame.origin.x = -cloud.frame.size.width

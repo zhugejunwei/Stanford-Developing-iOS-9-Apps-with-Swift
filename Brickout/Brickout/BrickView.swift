@@ -12,25 +12,25 @@ import CoreMotion
 @IBDesignable
 class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
 {
-    private var boardSize: CGSize {
+    fileprivate var boardSize: CGSize {
         let width = bounds.size.width / 4
         let height = width / 8
         return CGSize(width: width, height: height)
     }
     
-    private var ballSize: CGSize {
+    fileprivate var ballSize: CGSize {
         let width = boardSize.height
         let height = width
         return CGSize(width: width, height: height)
     }
     
-    private lazy var animator: UIDynamicAnimator = {
+    fileprivate lazy var animator: UIDynamicAnimator = {
         let animator = UIDynamicAnimator(referenceView: self)
         animator.delegate = self
         return animator
     }()
     
-    private let ballBehavior = BallBehavior()
+    fileprivate let ballBehavior = BallBehavior()
     
     var animating = false {
         didSet {
@@ -43,7 +43,7 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
         }
     }
     
-    private var attachment: UIAttachmentBehavior? {
+    fileprivate var attachment: UIAttachmentBehavior? {
         willSet {
             if attachment != nil {
                 animator.removeBehavior(attachment!)
@@ -62,7 +62,7 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
 //        }
 //    }
     
-    private let motionManager = CMMotionManager()
+    fileprivate let motionManager = CMMotionManager()
     
 //    func updateRealGravity() {
 //        if realGravity {
@@ -91,8 +91,8 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
 //        }
 //    }
     
-    private let bricksPerRow = 6
-    private var brickSize: CGSize {
+    fileprivate let bricksPerRow = 6
+    fileprivate var brickSize: CGSize {
         let width = bounds.size.width / CGFloat(bricksPerRow)
         let height = width / 2
         return CGSize(width: width, height: height)
@@ -139,12 +139,12 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
         
         addBricks()
         
-        let barrierPath = UIBezierPath(ovalInRect: CGRect(center: CGPoint(x: bounds.mid.x, y: 10 * brickSize.height), size: brickSize))
+        let barrierPath = UIBezierPath(ovalIn: CGRect(center: CGPoint(x: bounds.mid.x, y: 10 * brickSize.height), size: brickSize))
         ballBehavior.addBarrier(barrierPath, named: PathInts.Barrier)
         bezierPath[PathInts.Barrier] = barrierPath
     }
     
-    private var movedBall: UIView?
+    fileprivate var movedBall: UIView?
     
     func addBall()
     {
@@ -153,7 +153,7 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
         frame.origin.y = bounds.size.height - boardSize.height - boardSize.height
         
         let ball = UIView(frame: frame)
-        ball.backgroundColor = UIColor.blackColor()
+        ball.backgroundColor = UIColor.black
         ball.layer.cornerRadius = CGFloat(2 * M_PI)
         
         addSubview(ball)
@@ -162,14 +162,14 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
         movedBall = ball
     }
     
-    func startBall(recognizer: UITapGestureRecognizer) {
-        if recognizer.state == .Ended {
+    func startBall(_ recognizer: UITapGestureRecognizer) {
+        if recognizer.state == .ended {
             pushBall([movedBall!])
         }
     }
     
-    func pushBall(ball: [UIView]) {
-        let push = UIPushBehavior(items: ball, mode: UIPushBehaviorMode.Instantaneous)
+    func pushBall(_ ball: [UIView]) {
+        let push = UIPushBehavior(items: ball, mode: UIPushBehaviorMode.instantaneous)
         push.magnitude = 1.0
         push.pushDirection = CGVector(dx: 2, dy: -2)
         animator.removeBehavior(push)
@@ -183,7 +183,7 @@ class BrickView: NamedBezierPathViews, UIDynamicAnimatorDelegate
         frame.origin.y = bounds.size.height - boardSize.height
         
         let board = UIView(frame: frame)
-        board.backgroundColor = UIColor.blueColor()
+        board.backgroundColor = UIColor.blue
         board.layer.cornerRadius = CGFloat(20)
         
         addSubview(board)

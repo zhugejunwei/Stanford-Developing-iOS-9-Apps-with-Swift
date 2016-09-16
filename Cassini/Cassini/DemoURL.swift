@@ -18,9 +18,9 @@ struct DemoURL
         "Saturn" : "http://www.nasa.gov/sites/default/files/saturn_collage.jpg"
     ]
     
-    static func NASAImageNamed(imageName: String?) -> NSURL? {
+    static func NASAImageNamed(_ imageName: String?) -> URL? {
         if let urlstring = NASA[imageName ?? ""] {
-            return NSURL(string: urlstring)
+            return URL(string: urlstring)
         } else {
             return nil
         }

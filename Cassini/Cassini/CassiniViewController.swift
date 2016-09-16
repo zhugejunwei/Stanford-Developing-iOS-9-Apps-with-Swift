@@ -10,13 +10,13 @@ import UIKit
 
 class CassiniViewController: UIViewController, UISplitViewControllerDelegate
 {
-    private struct Storyboard {
+    fileprivate struct Storyboard {
         static let ShowImageSegue = "Show Image"
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Storyboard.ShowImageSegue {
-            if let ivc = segue.destinationViewController.contentViewController as? ImageViewController {
+            if let ivc = segue.destination.contentViewController as? ImageViewController {
                 let imageName = (sender as? UIButton)?.currentTitle
                 ivc.imageURL = DemoURL.NASAImageNamed(imageName)
                 ivc.title = imageName
@@ -24,13 +24,13 @@ class CassiniViewController: UIViewController, UISplitViewControllerDelegate
         }
     }
     
-    @IBAction func showImage(sender: UIButton) {
+    @IBAction func showImage(_ sender: UIButton) {
         if let ivc = splitViewController?.viewControllers.last?.contentViewController as? ImageViewController {
             let imageName = sender.currentTitle
             ivc.imageURL = DemoURL.NASAImageNamed(imageName)
             ivc.title = imageName
         } else {
-            performSegueWithIdentifier(Storyboard.ShowImageSegue, sender: sender)
+            performSegue(withIdentifier: Storyboard.ShowImageSegue, sender: sender)
         }
     }
     
@@ -39,10 +39,10 @@ class CassiniViewController: UIViewController, UISplitViewControllerDelegate
         splitViewController?.delegate = self
     }
     
-    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool
     {
         if primaryViewController.contentViewController == self {
-            if let ivc = secondaryViewController.contentViewController as? ImageViewController where ivc.imageURL == nil
+            if let ivc = secondaryViewController.contentViewController as? ImageViewController , ivc.imageURL == nil
             {
                 return true
             }

@@ -11,22 +11,22 @@ import UIKit
 class BallBehavior: UIDynamicBehavior
 {
     var gravity = UIGravityBehavior()
-    private let collider: UICollisionBehavior = {
+    fileprivate let collider: UICollisionBehavior = {
         let collider = UICollisionBehavior()
         collider.translatesReferenceBoundsIntoBoundary = true
         return collider
     }()
     
-    private let itemBehavior: UIDynamicItemBehavior = {
+    fileprivate let itemBehavior: UIDynamicItemBehavior = {
         let dib = UIDynamicItemBehavior()
         dib.allowsRotation = true
         dib.elasticity = 1.0
         return dib
     }()
 
-    func addBarrier(path: UIBezierPath, named name: Int) {
-        collider.removeBoundaryWithIdentifier(name)
-        collider.addBoundaryWithIdentifier(name, forPath: path)
+    func addBarrier(_ path: UIBezierPath, named name: Int) {
+        collider.removeBoundary(withIdentifier: name as NSCopying)
+        collider.addBoundary(withIdentifier: name as NSCopying, for: path)
     }
     
     override init() {
@@ -36,17 +36,17 @@ class BallBehavior: UIDynamicBehavior
         addChildBehavior(itemBehavior)
     }
     
-    func addBoard(item: UIDynamicItem) {
+    func addBoard(_ item: UIDynamicItem) {
         collider.addItem(item)
     }
     
-    func addItem(item: UIDynamicItem) {
+    func addItem(_ item: UIDynamicItem) {
         gravity.addItem(item)
         collider.addItem(item)
         itemBehavior.addItem(item)
     }
     
-    func removeItem(item: UIDynamicItem) {
+    func removeItem(_ item: UIDynamicItem) {
         gravity.removeItem(item)
         collider.removeItem(item)
         itemBehavior.removeItem(item)

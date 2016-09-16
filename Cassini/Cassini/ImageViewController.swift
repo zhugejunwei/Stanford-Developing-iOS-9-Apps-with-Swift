@@ -11,7 +11,7 @@ import UIKit
 class ImageViewController: UIViewController, UIScrollViewDelegate
 {
 
-    var imageURL: NSURL? {
+    var imageURL: URL? {
         didSet {
             image = nil
             if view.window != nil {
@@ -20,12 +20,12 @@ class ImageViewController: UIViewController, UIScrollViewDelegate
         }
     }
     
-    private func fetchImage() {
+    fileprivate func fetchImage() {
         if let url = imageURL {
             spinner?.startAnimating()
-            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
-                let contentsOfURL = NSData(contentsOfURL: url)
-                dispatch_async(dispatch_get_main_queue()) { //[weak weakSelf = self] in
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
+                let contentsOfURL = try? Data(contentsOf: url)
+                DispatchQueue.main.async { //[weak weakSelf = self] in
                     if url == self.imageURL {
                         if let imageData = contentsOfURL {
                             self.image = UIImage(data: imageData)
@@ -49,16 +49,16 @@ class ImageViewController: UIViewController, UIScrollViewDelegate
         }
     }
     
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
     
-    private var imageView = UIImageView()
+    fileprivate var imageView = UIImageView()
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     
-    private var image: UIImage? {
+    fileprivate var image: UIImage? {
         get {
             return imageView.image
         }
@@ -70,7 +70,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if image == nil {
             fetchImage()
